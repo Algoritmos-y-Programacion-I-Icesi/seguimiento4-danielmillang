@@ -40,4 +40,12 @@ public class Device {
         public void setDescription(String description) {
             this.description = description;
         }
+
+        public ArrayList<Event> getEvents() {
+            return events;
+        }
+
+        public void setEvents(ArrayList<Event> events) {
+            this.events = events;
+        }
 }

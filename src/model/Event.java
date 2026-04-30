@@ -7,7 +7,7 @@ public class Event {
     private double duration;
 
     public Event(LocalDateTime eventDate, double duration) {
-        this.EventDate = eventDate;
+        this.eventDate = eventDate;
         this.duration = duration;
     }
 
