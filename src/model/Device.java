@@ -1,17 +1,20 @@
 package model;
+import java.util.ArrayList;
+import java.time.LocalDateTime;
+import model.Event;
 
 public class Device {
         private String deviceID;
         private double consumption;
         private String description;
-        private ArrayList<event> events;
+        private ArrayList<Event> events;
     
 
         public Device(String deviceID, double consumption, String description){
             this.deviceID = deviceID;
             this.consumption = consumption;
             this.description = description;
-            this.events = new ArrayList<event>();
+            this.events = new ArrayList<Event>();
         }
 
         public String getDeviceID() {

@@ -11,7 +11,7 @@ public class Controller {
         this.devices = new Device[FLOORS][DEVICES_PER_FLOOR];
     }
 
-    public static void addDevice (String deviceID, double consumption, String description, int floor) {
+    public void addDevice (String deviceID, double consumption, String description, int floor) {
 
        
         for (int j = 0; j < DEVICES_PER_FLOOR; j++) {
@@ -35,7 +35,7 @@ public class Controller {
     }
 
 
-    public static void addEvent(String deviceID, LocalDateTime eventDate, double duration) {
+    public void addEvent(String deviceID, LocalDateTime eventDate, double duration) {
         
         for (int i = 0; i < FLOORS; i++) {
             for (int j = 0; j < DEVICES_PER_FLOOR; j++) {
@@ -50,7 +50,7 @@ public class Controller {
     }
 
 
-    public static void updateComsumptionValue (String deviceID, double newConsumption) {
+    public void updateComsumptionValue (String deviceID, double newConsumption) {
         for (int i = 0; i < FLOORS; i++) {
             for (int j = 0; j < DEVICES_PER_FLOOR; j++) {
                 if (devices[i][j] != null && devices[i][j].getDeviceID().equals(deviceID)) {
@@ -63,7 +63,7 @@ public class Controller {
     }
 
 
-    public static void calculateDeviceConsumption (String deviceID) {
+    public void calculateDeviceConsumption (String deviceID) {
         for (int i = 0; i < FLOORS; i++) {
             for (int j = 0; j < DEVICES_PER_FLOOR; j++) {
                 if (devices[i][j] != null && devices[i][j].getDeviceID().equals(deviceID)) {
@@ -81,7 +81,7 @@ public class Controller {
     }
 
 
-    public static void identifyWornOutDevices (double threshold) {
+    public void identifyWornOutDevices (double threshold) {
 
         threshold = 0.3;
 
